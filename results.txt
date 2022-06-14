@@ -1,0 +1,23 @@
+Document ALL tests here
+
+
+FILE                REMOVES? Y/N
+
+file with 700:      Y
+dir with 700:       Y
+empty dir with 000: Y
+dir with 000 with 
+    one file (700): N
+dir with 700 with 
+    one file (000): Y
+(NOTE: rm allows 
+this, but prompts a 
+y/n for override:         override --------- rogerburtonpatel/staff for dummy? )
+
+{
+Dir 700 v               
+        file 000
+        file 700
+        dir 000 v
+                file 000
+}: Removes file 700 and file 000
