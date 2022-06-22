@@ -15,7 +15,9 @@ import (
 )
 
 func main () {
-	os.RemoveAll("no-perm")
+	path := "write-only"
+	fmt.Println("Go program removing", path)
+	os.RemoveAll(path)
 }
 
 func TestRemoveAll(t *testing.T) {

@@ -1,3 +1,3 @@
-module go-bug
+module go-remove
 
 go 1.18

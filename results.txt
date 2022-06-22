@@ -3,6 +3,8 @@ Document ALL tests here
 
 FILE                REMOVES? Y/N
 
+700 VS 000
+
 file with 700:      Y
 dir with 700:       Y
 empty dir with 000: Y
@@ -21,3 +23,26 @@ Dir 700 v
         dir 000 v
                 file 000
 }: Removes file 700 and file 000
+
+{
+    Dir 000 v
+            dir2 000
+} (Call RemoveAll dir2): fails silently
+
+600 (Read/write, no execute. Execute needed for rm).
+
+empty dir 600:          < RemoveAll: Y   | rm -r: Y | rmdir: Y >
+dir 600, file 700:      < RemoveAll: N   | rm -r: N >
+
+
+
+FUNDAMENTAL PROBLEMS
+
+{
+    Dir 700 v
+    them (empty dir 000) 
+    us (empty dir 700)
+}:                        < RemoveAll: Y | rm -rf: N >
+
+file 000 (contains text): < RemoveAll: Y | rm (asks for override): Y-ish >
+
