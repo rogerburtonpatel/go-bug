@@ -25,6 +25,13 @@ Dir 700 v
 }: Removes file 700 and file 000
 
 {
+Dir 000 v               
+        dir 700 v
+                file 000
+}: Calling RemoveAll on the file fails. 
+
+
+{
     Dir 000 v
             dir2 000
 } (Call RemoveAll dir2): fails silently

@@ -14,8 +14,8 @@ import (
 	"testing"
 )
 
-func main () {
-	path := "write-only"
+func main() {
+	path := "/Users/rogerburtonpatel/Sandbox/go-remove/backup-no-perm/no-perm2/to-remove"
 	fmt.Println("Go program removing", path)
 	os.RemoveAll(path)
 }
